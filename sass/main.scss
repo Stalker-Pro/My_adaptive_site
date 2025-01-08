@@ -4,7 +4,8 @@ $color-primary-light:#7ed56f;
 $color-primary-dark:#28b485;
 
 $color-grey-dark:#777;
-$color-white:#fff;
+$color-white:#fff; 
+$color-black:#000;; 
 
 /* basic presset */
 *,
@@ -44,13 +45,15 @@ body{
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 }
 
-.header__logo-box{
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+
 
 .header__logo{
   height: 3.5rem;
@@ -169,16 +172,16 @@ body{
   background-color: $color-white;
   border-radius: 10rem;
   transition: 0.2s;
-  box-shadow: 0 5px 10px #45454594;
 }
 
 .btn--white:hover{
   transform: translateY(-0.5rem);
+  box-shadow: 0 5px 10px rgba($color-black,.3);
 }
 
 .btn--white:active{
   transform: translateY(0.1rem);
-  box-shadow:0 2px 5px;
+  box-shadow:0 2px 5px  rgba($color-black,.3);
 }
 
 .btn--animated{
