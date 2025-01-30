@@ -1,0 +1,14 @@
+/* LIVE SERVER */
+/* Пишем npm i live-server -g*/
+/* И тогда можно запускать с консоли*/
+
+
+/* COMPILE JSON*/
+/* npm run "compile:sass" */ 
+/*1) исполнемый пакет, 2) файл что преобразовать, 3)Куда закинуть*/
+
+  /* "scripts": {
+    "compile:sass": "node-sass sass/main.scss styles/style.css -w"
+  } */
+
+/* Для компиляции npm достаточно*/
