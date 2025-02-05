@@ -1,3 +1,23 @@
+///////////////////* basic presset *////////////////////
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	//This defines what 1 rem is 10 px
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+}
+///////////////////* basic presset *////////////////////
+
+
 /* LIVE SERVER */
 /* Пишем npm i live-server -g*/
 /* И тогда можно запускать с консоли*/
@@ -12,3 +32,28 @@
   } */
 
 /* Для компиляции npm достаточно*/
+
+
+/* ТИПИЧНОЕ ЦЕНТРИРОВАНИЕ
+.container {
+    position: relative;
+    height: 100vh; /* Высота контейнера */
+    background-color: #f0f0f0; /* Просто для визуализации */
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Сдвиг на половину ширины и высоты элемента */
+}
+
+
+/* CLEARFIX */
+@mixin clearFix{ //Чтобы не было коллапса высоты (*height = 0*)
+  &::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

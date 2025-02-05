@@ -1,18 +1,17 @@
 /* basic presset */
 *,
 *::after,
-*::before{
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
 }
 
-html{
-  //This defines what 1 rem is 10 px
-  font-size: 62.5%;
+html {
+	//This defines what 1 rem is 10 px
+	font-size: 62.5%;
 }
 
-body{
-  box-sizing: border-box;
+body {
+	box-sizing: border-box;
 }
-
