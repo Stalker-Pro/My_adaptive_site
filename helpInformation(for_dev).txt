@@ -34,20 +34,21 @@ body {
 /* Для компиляции npm достаточно*/
 
 
-/* ТИПИЧНОЕ ЦЕНТРИРОВАНИЕ
-.container {
-    position: relative;
-    height: 100vh; /* Высота контейнера */
-    background-color: #f0f0f0; /* Просто для визуализации */
-}
+/* ТИПИЧНОЕ ЦЕНТРИРОВАНИЕ (position: relative; у верхнего обычно)
 
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Сдвиг на половину ширины и высоты элемента */
-}
+  height:5rem;
+  width:5rem;
+  position:absolute;
+  top:50%;
+  left:50%;
+  translate: -50% -50%;
 
+
+/* ЦЕНТРИРОВАНИЕ ПО ГОРИЗОНТАЛИ */
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+}
 
 /* CLEARFIX */
 @mixin clearFix{ //Чтобы не было коллапса высоты (*height = 0*)
@@ -57,3 +58,16 @@ body {
     clear: both;
   }
 }
+
+/*   ICON - ОТКУДА БРАТЬ https://github.com/linea-io/Linea-Iconset   */
+
+/*ПОМОГАЕТ ОКРАСИТЬ КАРТИНКУ В ЦВЕТ КОТОРЫЙ ТЫ ХОЧЕШЬ*/
+/*Градиент например*/
+    &__icon{
+        display: inline-block;
+        font-size: 6rem;
+        margin-bottom: .5rem;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text; ///важно
+        color: transparent;
+    }
