@@ -71,3 +71,11 @@ body {
         -webkit-background-clip: text; ///важно
         color: transparent;
     }
+
+
+/* ЕСЛИ НЕ ИМПОРТИРУЕТСЯ ЧТО_ТО*/
+
+@use '../abstracts/variable' as *; 
+
+/// Если нужно использовать в других проектах VARIABLE 
+/// то в каждом файле его нужно подключить а в MAIN использовать как @use 'base/base';
