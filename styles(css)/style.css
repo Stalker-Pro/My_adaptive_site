@@ -111,40 +111,52 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-big {
+  margin-top: 8rem; }
+
+.u-margin-top-huge {
+  margin-top: 10rem; }
+
 .btn {
   text-transform: uppercase;
   display: inline-block;
   position: relative;
-  font-size: 1.6rem; }
-  .btn:link, .btn:active {
+  font-size: 1.6rem;
+  border-radius: 10rem;
+  transition: all 0.2s; }
+  .btn:link, .btn:active, .btn:visited {
     text-decoration: none;
     padding: 1.5rem 3rem; }
+  .btn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
+    .btn:hover::after {
+      transform: scale(1.5);
+      opacity: 0; }
+  .btn--green {
+    background-color: #55c57a;
+    color: #fff; }
+    .btn--green::after {
+      background-color: #55c57a; }
   .btn--white {
     color: #777;
-    background-color: #fff;
-    border-radius: 10rem;
-    transition: 0.2s; }
-    .btn--white:hover {
-      transform: translateY(-0.5rem);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); }
-      .btn--white:hover::after {
-        transform: scale(1.5);
-        opacity: 0; }
+    background-color: #fff; }
     .btn--white::after {
-      content: '';
-      display: inline-block;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      border-radius: 10rem;
-      top: 0;
-      left: 0;
-      background-color: #fff;
-      z-index: -1;
-      transition: all 0.2s; }
-    .btn--white:active {
-      transform: translateY(0.1rem);
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
+      background-color: #fff; }
+  .btn::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.25s; }
+  .btn:active {
+    transform: translateY(0.1rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); }
   .btn--animated {
     animation: moveInBottom ease-out 1s; }
 
@@ -249,7 +261,9 @@ body {
     height: 23rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
     .card__picture--1 {
       background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(/img/nat-5.jpg); }
     .card__picture--2 {
@@ -369,6 +383,6 @@ body {
     transform: skewY(7deg); }
 
 .section-tours {
-  margin-top: -10rem;
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0; }
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem; }
