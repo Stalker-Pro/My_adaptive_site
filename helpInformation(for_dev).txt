@@ -100,5 +100,67 @@ body {
 /* ЕСЛИ КАРТИНКА НЕ ПОМЕЩАЕТСЯ В КОНТЕЙНЕР ТО */
   // облегает всё свободное место (помещается) родительского элемента
         object-fit: cover; 
+(при этом родительский: relative, а дочерний: absolute)
+
   // чтобы картинка скрылась (не выходила) за края контейнера
         overflow: hidden;
+
+
+/*МОЖНО СОВМЕЩАТЬ ГРАДИЕНТ И КАРТИНКУ */
+(например вместо clip-path: ; , делая второй цвет transparent)
+background-image:
+linear-gradient(105deg,rgba($color-white, .9), orangered), url(/img/nat-10.jpg);
+
+
+
+///////////////////////////////////////
+/* ФАКТИЧЕСКОЕ УДОБНОЕ ЦЕНТРИРОВАНИЕ */
+///////////////////////////////////////
+.row{
+  max-width: $grid-width;
+  margin: 0 auto;
+  
+  &:not(:last-child){
+    margin-bottom: $gutter-vertical;
+  }
+
+  @include clearFix;
+
+
+  [class^="col-"]{
+    float: left;
+  
+
+    &:not(:last-child){
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-2{
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+  }
+
+  .col-1-of-3{
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+  }
+  
+  .col-2-of-3{
+    width: calc((2*(100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+  }
+  
+  .col-2-of-4{
+    width: calc((2*(100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+  }
+
+  .col-1-of-4{
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+  }
+
+  .col-3-of-4{
+    width: calc((3*(100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal});
+  } 
+}
+
+///////////////////////////////////////КОНЕЦ///////////////////
+/* ФАКТИЧЕСКОЕ УДОБНОЕ ЦЕНТРИРОВАНИЕ */
+///////////////////////////////////////
