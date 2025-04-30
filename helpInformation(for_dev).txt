@@ -17,6 +17,9 @@ body {
 }
 ///////////////////* basic presset *////////////////////
 
+/*    УДАЛЕНИЕ node_modules для PUSH   */
+git rm -r  --cached .\node_modules\
+
 
 /* LIVE SERVER */
 /* Пишем npm i live-server -g*/
@@ -112,6 +115,13 @@ background-image:
 linear-gradient(105deg,rgba($color-white, .9), orangered), url(/img/nat-10.jpg);
 
 
+/* ЧТОБЫ МОЖНО БЫЛО СДЕЛАТЬ ЧТО_ТО ВЫПАДАЮЩЕЕ В INPUT 
+С ОДИНАКОВЫМ НАЧАЛОМ ТИПО form__input и form__label (& - здесь form) */
+	&__input:placeholder-shown + &__label {// stand for 'sibling'	
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
 
 ///////////////////////////////////////
 /* ФАКТИЧЕСКОЕ УДОБНОЕ ЦЕНТРИРОВАНИЕ */
