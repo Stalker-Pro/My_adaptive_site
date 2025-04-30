@@ -123,6 +123,26 @@ linear-gradient(105deg,rgba($color-white, .9), orangered), url(/img/nat-10.jpg);
 		transform: translateY(-4rem);
 	}
 
+
+/* КАК РАБОТАЕТ LABEL В INPUT 
+(ДВЕ ШТУКИ С ОДИНАКОВЫМ НАЗВАНИЕМ (name) для переключения)
+  НИЖЕ ПОКАЗАН SIMBLING
+*/
+    <div class="form__radio-group">
+      <input type="radio" class="form__radio-input" id="small name="size"">
+      <label for="small" class="form__radio-label">Small tour group</label>
+    </div>
+
+    <div class="form__radio-group">
+      <input type="radio" class="form__radio-input" id="small name="size"">
+      <label for="small" class="form__radio-label">Small tour group</label>
+    </div>
+
+// 1) что произошло ~ 2)Класс содержащий элемент 3) Класс кому будет поручено сделать    
+	&__radio-input:checked ~ &__radio-label &__radio-button::after {
+		opacity: 1;
+	}
+
 ///////////////////////////////////////
 /* ФАКТИЧЕСКОЕ УДОБНОЕ ЦЕНТРИРОВАНИЕ */
 ///////////////////////////////////////

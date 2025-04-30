@@ -5,7 +5,7 @@
 	font-size: $default-font-size;
 
 	border-radius: 10rem;
-	transition:all 0.2s;
+	transition: all 0.2s;
 
 	&:link,
 	&:active,
@@ -35,7 +35,7 @@
 	&--white {
 		color: $color-grey-dark;
 		background-color: $color-white;
-				&::after {
+		&::after {
 			background-color: $color-white;
 		}
 	}
