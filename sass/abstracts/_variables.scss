@@ -15,11 +15,13 @@ $color-grey-light-2: #eee;
 
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
 
 //SHADOW
+$shadow-lighter: 0 1rem 2rem rgba($color-black, .15);
 $shadow-light: 0 1.5rem 4rem rgba($color-black, .15);
 $shadow-middle: 0 3rem 6rem rgba($color-black, .15);
 
